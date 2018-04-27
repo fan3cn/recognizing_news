@@ -5,7 +5,7 @@
 sh preprocess.sh
 ```
 
-- Install THULAC
+- Install THULAC  
 please go to [thulac.org](http://thulac.thunlp.org/) for instruction
 
 - Word segmentation
