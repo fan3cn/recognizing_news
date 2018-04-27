@@ -5,7 +5,7 @@
 sh generate_data.sh
 ```
 
-- install fasttext
+- install fasttext  
 please go to [fasttext.cc](https://fasttext.cc/) for the installion instruction, make sure it is properly installed and configured.
 
 - Modify `train.sh`
