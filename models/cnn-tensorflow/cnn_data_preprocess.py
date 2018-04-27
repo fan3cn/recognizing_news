@@ -1,4 +1,5 @@
 # coding: utf-8
+import os
 
 dataset_info=[]
 content_matters=[]
@@ -6,6 +7,9 @@ training=[]
 val=[]
 test=[]
 i=0
+
+if not os.path.exists('data'):
+    os.makedirs('data')
 
 path = "../../data/"
 with open(path+'News_pic_label_train.txt','r') as labelset:
@@ -38,6 +42,7 @@ with open(path+'News_info_validate_seg.txt','r') as dataset:
     content = items[1]
     words=content.split(' ')
     test.append(' '.join(words))
+
 
 with open('data/train.txt','w') as fout:
   for line in training:

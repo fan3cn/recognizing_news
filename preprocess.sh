@@ -1,3 +1,6 @@
+if [ ! -d "data" ]; then
+  mkdir data
+fi
 echo "unzip data..."
 unzip raw_data/data.zip
 echo "preprocessing..."

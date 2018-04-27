@@ -1,3 +1,6 @@
+if [ ! -d "data" ]; then
+  mkdir data
+fi
 #generate features
 awk -F '\t' 'NR == FNR{a[$1] = $2} NR != FNR {if(a[$1] >= 1) print $2}' ../../data/News_pic_label_train.txt ../../data/News_info_train_seg.txt > data/temp1
 #remove stopwords

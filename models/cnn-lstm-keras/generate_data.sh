@@ -1,3 +1,7 @@
+if [ ! -d "data" ]; then
+  mkdir data
+fi
+
 awk -F '\t' '{print $2}' ../../data/News_info_train_seg.txt > data/X.train
 awk -F '\t' '{print $2}' ../../data/News_info_validate_seg.txt > data/X.test
 

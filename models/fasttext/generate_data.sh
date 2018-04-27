@@ -3,7 +3,10 @@
 
 #echo 'removing stopwords...'
 #awk -F " " 'NR==FNR {s[$1] = 1} NR != FNR {b="";for(i=1;i<=NF;i++) if(s[$i] !=1 ) b=b""$i" "; print b}' /Users/Eric/Desktop/sohu_seg/stopwords.txt  news_content.train.raw > news_content.train
-mkdir data
+
+if [ ! -d "data" ]; then
+  mkdir data
+fi
 
 echo 'generate data...'
 awk -F '\t' '{print $2}' ../../data/News_info_train_seg.txt > data/temp1
